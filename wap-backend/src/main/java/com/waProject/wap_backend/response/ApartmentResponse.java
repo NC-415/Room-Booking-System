@@ -18,7 +18,7 @@ public class ApartmentResponse {
     private int numberOfBathrooms;
     private boolean availabilityStatus;
     private boolean isBooked;
-    private List<BookedApartment> bookings;
+    private List<BookingResponse> bookings;
     private String photo;
 
     public ApartmentResponse(int apartmentId, String apartmentType, String description, double pricePerNight, int size, int numberOfBedrooms, int numberOfBathrooms, boolean availabilityStatus) {
@@ -32,7 +32,8 @@ public class ApartmentResponse {
         this.availabilityStatus = availabilityStatus;
     }
 
-    public ApartmentResponse(int apartmentId, String apartmentType, String description, double pricePerNight, int size, int numberOfBedrooms, int numberOfBathrooms, boolean availabilityStatus, boolean isBooked, List<BookedApartment> bookings, byte[] photoBytes) {
+    public ApartmentResponse(int apartmentId, String apartmentType, String description, double pricePerNight, int size, int numberOfBedrooms, int numberOfBathrooms, boolean availabilityStatus, boolean isBooked, byte[] photoBytes) {
+        //, List<BookingResponse> bookings
         this.apartmentId = apartmentId;
         this.apartmentType = apartmentType;
         this.description = description;
@@ -42,7 +43,7 @@ public class ApartmentResponse {
         this.numberOfBathrooms = numberOfBathrooms;
         this.availabilityStatus = availabilityStatus;
         this.isBooked = isBooked;
-        this.bookings = bookings;
         this.photo = photoBytes != null ? Base64.encodeBase64String(photoBytes) : null;
+        //this.bookings = bookings;
     }
 }

@@ -1,14 +1,10 @@
 package com.waProject.wap_backend.response;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.sql.Timestamp;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class BookingResponse {
@@ -27,16 +23,10 @@ public class BookingResponse {
 
     // Constructor without ApartmentResponse (if not needed)
     public BookingResponse(Long bookingId, Timestamp checkInDate, Timestamp checkOutDate,
-                           String guestFullName, String guestEmail, int numOfAdults,
-                           int numOfChildren, int totalNumOfGuests, String bookingConfirmationCode) {
+                           String bookingConfirmationCode) {
         this.bookingId = bookingId;
         this.checkInDate = checkInDate;
         this.checkOutDate = checkOutDate;
-        this.guestFullName = guestFullName;
-        this.guestEmail = guestEmail;
-        this.numOfAdults = numOfAdults;
-        this.numOfChildren = numOfChildren;
-        this.totalNumOfGuests = totalNumOfGuests;
         this.bookingConfirmationCode = bookingConfirmationCode;
     }
 }

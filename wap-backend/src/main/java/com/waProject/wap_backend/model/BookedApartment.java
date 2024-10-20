@@ -50,6 +50,7 @@ public class BookedApartment {
     protected void calculateTotalNumOfGuests() {
         this.totalNumOfGuests = this.numOfAdults + this.numOfChildren;
     }
+
     public void setApartment(Apartment apartment) {
     }
 

@@ -19,7 +19,6 @@ import java.util.List;
 @Table(name = "Apartment")
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
 @ToString
 public class Apartment {
@@ -71,7 +70,9 @@ public class Apartment {
         updatedAt = new Timestamp(System.currentTimeMillis());
     }
 
-
+public Apartment() {
+        this.bookings = new ArrayList<>();
+}
     public void addBooking(BookedApartment booking){
         if (bookings == null){
             bookings = new ArrayList<>();
