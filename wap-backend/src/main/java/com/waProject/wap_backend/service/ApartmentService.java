@@ -14,4 +14,6 @@ public interface ApartmentService {
     List<Apartment> getAllApartments();
 
     byte[] getApartmentPhotoByApartmentId(int apartmentId) throws SQLException;
+
+    void deleteApartment(int apartmentId);
 }

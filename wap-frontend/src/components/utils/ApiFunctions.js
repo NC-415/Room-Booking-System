@@ -41,5 +41,23 @@ export async function addApartment(apartmentType, description, pricePerNight, si
     }
 }
 
+/* This function gets all rooms from the database */
+export async function getAllApartments() {
+	try {
+		const result = await api.get('/apartments')
+		return result.data
+	} catch (error) {
+		throw new Error("Error fetching apartments")
+	}
+}
 
 
+/* This function deletes an apartment from the database */
+export async function deleteApartment(apartmentId) {
+    try {
+        const result = await api.delete(`/apartments/${apartmentId}`) // use backticks here
+        return result.data
+    } catch (error) {
+        throw new Error(`Error deleting apartment: ${error.message}`)
+    }
+}

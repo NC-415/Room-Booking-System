@@ -100,4 +100,12 @@ public class ApartmentServiceImpl implements ApartmentService{
             return photoBlob.getBytes(1, (int) photoBlob.length());
         }
         return null;    }
+
+    @Override
+    public void deleteApartment(int apartmentId) {
+        Optional<Apartment> theApartment = apartmentRepository.findById(apartmentId);
+        if(theApartment.isPresent()){
+            apartmentRepository.deleteById(apartmentId);
+        }
+    }
 }

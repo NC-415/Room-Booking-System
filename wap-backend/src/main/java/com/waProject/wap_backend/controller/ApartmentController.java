@@ -7,6 +7,7 @@ import com.waProject.wap_backend.response.BookingResponse;
 import com.waProject.wap_backend.service.ApartmentService;
 import com.waProject.wap_backend.service.BookingService;
 import org.apache.tomcat.util.codec.binary.Base64;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -74,6 +75,11 @@ public class ApartmentController {
             }
         }
         return ResponseEntity.ok(apartmentResponses);
+    }
+@DeleteMapping("/{apartmentId}")
+    public ResponseEntity <Void> deleteApartment(@PathVariable int apartmentId){
+        apartmentService.deleteApartment(apartmentId);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
 
