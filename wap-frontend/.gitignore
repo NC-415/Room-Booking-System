@@ -7,18 +7,67 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Dependency directories
+node_modules/
 
-# Editor directories and files
-.vscode/*
+# Build output
+dist/
+dist-ssr/
+out/
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Next.js
+.next/
+
+# Nuxt.js
+.nuxt/
+.vuepress/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Cache files
+.cache/
+.pnp.cjs
+.pnp.loader.mjs
+
+# IDE and editor files
+.vscode/
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+
+# Package lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Firebase/React Native
+firebase-debug.log
+*.xcworkspace
+
+# TypeScript build
+*.tsbuildinfo
+
+# Storybook build
+.storybook-out/
+
+# Other files
+.eslintcache
+.parcel-cache/
