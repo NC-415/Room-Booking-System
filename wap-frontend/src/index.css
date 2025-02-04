@@ -53,8 +53,8 @@ body {
  }
 
   /* Hotel custom color */
- .btn-web{
-  background-color: #BF9766;
+ .btn-hotel{
+  background-color: rgb(169, 77, 123);
   color: #fff;
   }
   .btn-hotel:hover{
@@ -66,8 +66,8 @@ body {
 
   }
 
-  .web-color{
-    color: #2D2C2C;
+  .hotel-color{
+    color: rgb(169, 77, 123);
   }
   .room-price{
     color:darkgoldenrod;
@@ -189,7 +189,7 @@ body {
 
 /* The header banner */
 .header-banner {
-  background-image:  url("./assets/images/services-1.jpg");
+  background-image:  url("./assets/images/services1.jpg");
    background-size: cover;
   background-position: center;
    position: relative;
@@ -222,3 +222,7 @@ body {
   height: 60px;
   text-align: center;
 }
+
+
+
+
